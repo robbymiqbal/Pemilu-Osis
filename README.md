@@ -1,45 +1,86 @@
-Penjelasan Program "Pemilu Ketua OSIS"
-Program ini adalah sistem pemilihan ketua OSIS berbasis Java yang memungkinkan pengguna untuk melihat kandidat, memberikan suara, mencari kandidat, serta mengurutkan kandidat berdasarkan jumlah suara yang diperoleh.
+# Pemilu Ketua OSIS
 
-1. Struktur Program
-Program ini terdiri dari:
+## Deskripsi
+Program ini adalah sistem pemilihan ketua OSIS berbasis Java yang memungkinkan pengguna untuk melihat daftar kandidat, memberikan suara, mencari kandidat, serta mengurutkan kandidat berdasarkan jumlah suara yang diperoleh.
 
-* Class Kandidat
-- Digunakan untuk merepresentasikan kandidat ketua OSIS.
-- Setiap kandidat memiliki atribut nama dan suara untuk menyimpan jumlah suara yang diperoleh.
-
-* Class uasalgorobby (Program Utama)
-- Menyimpan daftar kandidat dalam array kandidat.
-- Menggunakan Scanner untuk menerima input dari pengguna.
-- Mengelola proses pemilihan melalui menu interaktif.
-
-2. Fungsi-Fungsi Utama
-a) tampilkanKandidat()
-- Menampilkan daftar kandidat beserta jumlah suara mereka.
-
-b) beriSuara()
-- Memungkinkan pengguna untuk memberikan suara kepada kandidat berdasarkan nomor urut.
-- Mengecek apakah nomor kandidat valid. Jika valid, suara bertambah, jika tidak, muncul pesan error.
-
-c) cariKandidat()
-- Memungkinkan pengguna untuk mencari kandidat berdasarkan nomor urut.
-- Jika nomor kandidat valid, menampilkan informasi kandidat. Jika tidak, muncul pesan error.
-
-d) urutkanKandidat()
-- Menggunakan algoritma Bubble Sort untuk mengurutkan kandidat berdasarkan jumlah suara dari terbanyak ke tersedikit.
-
-3. Logika Program
-a) Program menampilkan menu utama dan meminta pengguna memilih opsi.
-b) Pengguna dapat:
-- Melihat daftar kandidat.
-- Memberikan suara kepada kandidat dengan memasukkan nomor urut.
+## Fitur
+- Menampilkan daftar kandidat ketua OSIS.
+- Memberikan suara kepada kandidat berdasarkan nomor urut.
 - Mencari kandidat berdasarkan nomor urut.
-- Mengurutkan kandidat berdasarkan jumlah suara.
-- Keluar dari program.
+- Mengurutkan kandidat berdasarkan jumlah suara terbanyak.
+- Sistem berbasis menu interaktif dalam Command Line Interface (CLI).
 
-c) Program terus berjalan dalam perulangan do-while sampai pengguna memilih opsi keluar.
+## Struktur Program
+Program terdiri dari dua kelas utama:
+1. **Kelas `Kandidat`**
+   - Merepresentasikan kandidat dengan atribut `nama` dan `suara`.
+2. **Kelas `uasalgorobby` (Program Utama)**
+   - Mengelola daftar kandidat dalam array.
+   - Menyediakan menu utama dan menangani input pengguna.
 
+## Cara Menjalankan Program
+1. Pastikan **Java** telah terinstal di komputer Anda.
+2. Simpan kode dalam file `uasalgorobby.java`.
+3. Buka terminal atau Command Prompt di direktori file.
+4. Jalankan perintah berikut untuk mengompilasi program:
+   ```sh
+   javac uasalgorobby.java
+   ```
+5. Jalankan program dengan perintah:
+   ```sh
+   java uasalgorobby
+   ```
+6. Ikuti instruksi dalam menu untuk menggunakan program.
 
-Kesimpulan
-Program ini menggunakan percabangan (switch-case), perulangan (do-while), fungsi-fungsi terpisah, serta algoritma sorting (Bubble Sort).
-Sistem berbasis angka untuk pemilihan dan pencarian kandidat membuat program ini lebih mudah digunakan.
+## Menu Utama
+Saat program dijalankan, pengguna akan melihat menu berikut:
+```
+=== Pemilu Ketua OSIS ===
+1. Lihat Kandidat
+2. Beri Suara
+3. Cari Kandidat
+4. Urutkan Kandidat Berdasarkan Suara
+5. Keluar
+```
+Pengguna dapat memilih opsi dengan memasukkan angka yang sesuai.
+
+## Fungsi Utama
+### `tampilkanKandidat()`
+Menampilkan daftar kandidat beserta jumlah suara mereka.
+
+### `beriSuara()`
+- Menampilkan daftar kandidat.
+- Meminta pengguna memilih nomor kandidat.
+- Jika nomor valid, menambahkan suara ke kandidat.
+
+### `cariKandidat()`
+- Meminta pengguna memasukkan nomor kandidat.
+- Jika valid, menampilkan informasi kandidat.
+
+### `urutkanKandidat()`
+- Menggunakan algoritma **Bubble Sort** untuk mengurutkan kandidat berdasarkan jumlah suara terbanyak.
+
+## Teknologi yang Digunakan
+- **Java** (Bahasa Pemrograman)
+- **VS Code / Command Line** (IDE & CLI)
+
+## Contoh Output
+```
+=== Pemilu Ketua OSIS ===
+1. Lihat Kandidat
+2. Beri Suara
+3. Cari Kandidat
+4. Urutkan Kandidat Berdasarkan Suara
+5. Keluar
+Pilih menu: 2
+
+Masukkan nomor kandidat yang ingin dipilih: 1
+Suara diberikan kepada Muhammad Ramdhani.
+```
+
+## Kesimpulan
+- Program ini menggunakan **percabangan (`switch-case`)**, **perulangan (`do-while`)**, **fungsi terpisah**, serta **algoritma sorting**.
+- Sistem berbasis angka untuk pemilihan dan pencarian kandidat membuatnya lebih mudah digunakan.
+
+---
+**Author:** Robby (UAS Algoritma)
